@@ -66,7 +66,7 @@
                                 @enderror
                             </div>
                             <div class="form-check mb-3">
-                                <input class="form-check-input" type="checkbox" id="is_active" name="is_active" {{ (old('is_active', isset($product) ? $product->is_active : false)) ? 'checked' : '' }}>
+                            <input class="form-check-input" type="checkbox" id="is_active" name="is_active" {{ isset($product) ? ($product->is_active ? 'checked' : '') : 'checked' }}>
                                 <label class="form-check-label" for="is_active">Active</label>
                             </div>
                             <button type="submit" class="btn btn-primary">{{ $addUpdateLabel }}</button>
